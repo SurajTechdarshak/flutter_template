@@ -1,0 +1,97 @@
+name: flutter_template
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cached_network_image: ^3.3.0
+  cupertino_icons: ^1.0.2
+  device_preview: ^1.1.0
+  feather_icons: ^1.2.0
+  flutter_svg: ^2.0.7
+  get: ^4.6.6
+  shared_preferences: ^2.2.1
+  shimmer: ^3.0.0
+  
+  # Local Dependencies
+  core:
+    path: packages/core
+  go_router: ^12.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+  build_runner:
+  flutter_gen_runner:
+
+flutter_gen:
+  output: lib/gen/
+  line_length: 80
+
+  integrations:
+    flutter_svg: true
+    flare_flutter: true
+    rive: true
+    lottie: true
+
+  assets:
+    enabled: true
+
+    outputs:
+      class_name: Assets
+      package_parameter_enabled: false
+      # Assets.imagesChip
+      # style: camel-case
+
+      # Assets.images_chip
+      # style: snake-case
+
+      # Assets.images.chip (default style)
+      style: dot-delimiter
+
+    exclude:
+      - assets/fonts/commit_mono/
+    #   - assets/images/chip3/chip3.jpg
+    #   - pictures/chip5.jpg
+    #   - assets/flare/
+
+  # fonts:
+  #   enabled: true
+  #   outputs:
+  #     class_name: MyFontFamily
+
+  # colors:
+  #   enabled: true
+  #   outputs:
+  #     class_name: MyColorName
+  #   inputs:
+  #     - assets/color/colors.xml
+  #     - assets/color/colors2.xml
+  #     - assets/color/colors2.xml # duplicated
+flutter:
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/images/placeholders/
+    
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
